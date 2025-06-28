@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS Books (
 );
 
 
-CREATE TABLE IF NOT EXISTS Customers (
+CREATE TABLE IF NOT EXISTS customers (
     customer_id INT PRIMARY KEY,
     customer_name VARCHAR(215) NOT NULL,
     email VARCHAR(215) UNIQUE ,
@@ -42,5 +42,5 @@ CREATE TABLE IF NOT EXISTS Order_Details(
 );
 
 
-INSERT INTO Customers (customer_id, customer_name, email, address) 
+INSERT INTO customers (customer_id, customer_name, email, address) 
 VALUES(1,"Cole Baidoo", "cbaidoo@sandtech.com", " 123 Happiness Ave.")
