@@ -7,20 +7,20 @@ CREATE TABLE IF NOT EXISTS Books (
     title VARCHAR(130) NOT NULL,
     author_id INT NOT NULL,
     publication_date DATE,
-    price DOUBLE NOT NULL
+    price DOUBLE NOT NULL,
     FOREIGN KEY (author_id) REFERENCES Authors(author_id)
 );
 
 CREATE TABLE IF NOT EXISTS Authors (
     author_id INT PRIMARY KEY,
-    author_name VARCHAR(215) NOT NULL,
+    author_name VARCHAR(215) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Customers (
     customer_id INT PRIMARY KEY,
     customer_name VARCHAR(215) NOT NULL,
     email VARCHAR(215) UNIQUE ,
-    address TEXT ,
+    address TEXT 
 );
 
 CREATE TABLE IF NOT EXISTS Orders (
@@ -37,4 +37,4 @@ CREATE TABLE IF NOT EXISTS Order_Details(
     quantity DOUBLE,
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     FOREIGN KEY (book_id) REFERENCES Books(book_id)
-)
+);
